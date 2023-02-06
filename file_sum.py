@@ -7,12 +7,14 @@
 # text file named sum.txt.
 
 def file_sum(filename):
+    """Finds the sum of a set of numbers."""
     sum = 0
-    with open(filename, 'r') as outfile:
+    with open(filename) as outfile:
         for num in outfile:
             sum += float(num)
     with open("sum.txt", "w") as outfile:
         outfile.write(str(sum) + "\n")
 
 
-file_sum("num.txt")
+if __name__ == '__main__':
+    file_sum("numbers.txt")
